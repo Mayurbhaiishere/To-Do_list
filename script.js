@@ -1,6 +1,6 @@
 let toggle1 = 0;
 
-document.getElementById("ok").addEventListener("click", function () {
+function main() {
   const taskValue = document.getElementById("task").value.trim();
   if (taskValue !== "") {
     const taskWrapper = document.createElement("div");
@@ -45,5 +45,12 @@ document.getElementById("ok").addEventListener("click", function () {
     taskWrapper.appendChild(deleteBtn);
     document.getElementById("main").appendChild(taskWrapper);
     document.getElementById("task").value = "";
+  }
+}
+document.getElementById("ok").addEventListener("click",main());
+document.addEventListener("keydown",function (event) {
+  let enter1 = event.key;
+  if (enter1 == 'Enter') {
+    main();
   }
 });
