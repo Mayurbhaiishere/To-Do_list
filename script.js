@@ -47,7 +47,7 @@ function main() {
     document.getElementById("task").value = "";
   }
 }
-document.getElementById("ok").addEventListener("click",main());
+document.getElementById("ok").addEventListener("click",main);
 document.addEventListener("keydown",function (event) {
   let enter1 = event.key;
   if (enter1 == 'Enter') {
